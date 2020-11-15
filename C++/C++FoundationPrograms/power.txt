@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	// Write your code here
+	    int x,n;
+    int result=1;
+    int total=1;
+    cin>>x;
+    cin>>n;
+    while(n>=1)
+    {
+        total=total*x;
+        n=n-1;
+    }
+    cout<<total;
+    
+}

@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+  char ch;
+    ch=cin.get();
+    int countChars=1;
+    int countDigits=0;
+    int countSpaces=0;
+    while(ch!='$')
+    {
+        ch=cin.get();
+        if(ch>='a' && ch<='z'){
+        countChars=countChars+1;
+        }
+        else if(countChars==1){
+            countChars=countChars-1;
+        }
+         if(ch>='0' && ch<='9'){
+        countDigits=countDigits+1;
+        }
+         if(ch==' ' || ch=='\n' || ch=='\t'){
+        countSpaces=countSpaces+1;
+        }
+    }
+    cout<<countChars<<"\t"<<countDigits<<"\t"<<countSpaces;
+ return 0;
+}
+

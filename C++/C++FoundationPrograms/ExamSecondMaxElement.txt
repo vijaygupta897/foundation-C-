@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>
+#include <math.h>
+using namespace std;
+int main(){
+ int n,num,count=1,curr=0,max=INT_MIN,smax=INT_MIN;
+	cin>>n;
+	while(count<=n)
+    {
+        cin>>num;
+        curr=num;
+        if(curr>max)
+        {
+            smax=max;
+            max=curr;
+        }
+        else if(curr>smax)
+        {
+             smax=curr;
+        }
+
+        count=count+1;
+    }
+    if(max==smax){
+        cout<<INT_MIN;
+    }
+    else
+   cout<<smax;
+
+    return 0;
+}

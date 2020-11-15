@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+#include <math.h>
+using namespace std;
+int main(){
+  int r=0,p=0,count=0;
+long int sum=0,n;
+  cin>>n;
+  while(n>=1)
+    {
+    r=n%2;
+    sum=sum+r*pow(10,p);
+    p=p+1;
+    n=n/2;
+    }
+    cout<<sum;
+ return 0;
+}
+
