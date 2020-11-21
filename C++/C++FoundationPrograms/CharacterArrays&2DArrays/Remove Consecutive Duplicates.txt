@@ -1,0 +1,23 @@
+For a given string(str), remove all the consecutive duplicate characters.
+Example:
+Input String: "aaaa"
+Expected Output: "a"
+
+Input String: "aabbbcc"
+Expected Output: "abc"
+========================
+void removeConsecutiveDuplicates(char *str) {
+    // Write your code here
+    char lastChar=' ';
+    int count=1; 
+    for(int i=1;str[i]!='\0';i++)
+    {
+        lastChar=str[count-1];
+        if(lastChar!=str[i])
+        {
+            str[count]=str[i];
+            count++;
+        }
+    }
+    str[count]='\0';
+}
